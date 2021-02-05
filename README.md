@@ -194,4 +194,4 @@ Here we talk about some more tangential aspects of the interpreter.
     # id_bool = lambda x:Bool.x;
     - id_bool : Bool -> Bool
     ```
-- Comments: It is possible to add comments as long as they are between "(\ *" and "\ *)", ignoring everything that is inside in the evaluation.
+- Comments: It is possible to add comments as long as they are between "(\*" and "\*)", ignoring everything that is inside in the evaluation.
