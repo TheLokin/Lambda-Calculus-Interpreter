@@ -1,0 +1,29 @@
+0;
+15;
+succ (pred 0);
+iszero (pred (succ (succ 0)));
+
+let id_nat = lambda x:Nat. x in id_nat 0;
+id_nat = lambda x:Nat.x;
+id_nat 14;
+
+let id_bool = lambda x:Bool. x in id_bool true;
+id_bool = lambda x:Bool.x;
+id_bool true;
+
+if false then 1 else 0;
+tru = true;
+id_bool tru;
+
+let sumaux = lambda f:Nat->Nat->Nat. lambda n:Nat. lambda m:Nat.
+  if iszero n
+  then m
+  else succ (f (pred n) m) in
+let sum = fix sumaux in
+sum 21 34;
+
+letrec sum:Nat->Nat->Nat = lambda n:Nat. lambda m:Nat.
+  if iszero n
+  then m
+  else succ (sum (pred n) m)
+in sum 21 34;

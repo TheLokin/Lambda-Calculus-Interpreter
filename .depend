@@ -1,0 +1,24 @@
+church.cmo : syntax.cmo church.cmi
+church.cmx : syntax.cmx church.cmi
+church.cmi : syntax.cmo
+lambda.cmo : utils.cmi syntax.cmo lambda.cmi
+lambda.cmx : utils.cmx syntax.cmx lambda.cmi
+lambda.cmi : syntax.cmo
+lexer.cmo : parser.cmi
+lexer.cmx : parser.cmx
+main.cmo : types.cmi syntax.cmo print.cmi parser.cmi lexer.cmo lambda.cmi
+main.cmx : types.cmx syntax.cmx print.cmx parser.cmx lexer.cmx lambda.cmx
+parser.cmo : syntax.cmo church.cmi parser.cmi
+parser.cmx : syntax.cmx church.cmx parser.cmi
+parser.cmi : syntax.cmo
+print.cmo : syntax.cmo church.cmi print.cmi
+print.cmx : syntax.cmx church.cmx print.cmi
+print.cmi : syntax.cmo
+syntax.cmo :
+syntax.cmx :
+types.cmo : syntax.cmo types.cmi
+types.cmx : syntax.cmx types.cmi
+types.cmi : syntax.cmo
+utils.cmo : utils.cmi
+utils.cmx : utils.cmi
+utils.cmi :
